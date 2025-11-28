@@ -23,6 +23,7 @@ dosfstools
 downgrade
 dracut
 duf
+dunst
 e2fsprogs
 efibootmgr
 efitools
@@ -37,6 +38,7 @@ f2fs-tools
 ffmpegthumbnailer
 firewalld
 git
+github-cli
 glances
 gst-libav
 gst-plugin-pipewire
@@ -46,6 +48,7 @@ haveged
 hdparm
 hwdetect
 hwinfo
+hyprland
 inetutils
 intel-ucode
 inxi
@@ -53,6 +56,7 @@ iptables-nft
 iwd
 jfsutils
 kernel-install-for-dracut
+kitty
 less
 libdvdcss
 libgsf
@@ -99,6 +103,7 @@ pipewire-jack
 pipewire-pulse
 pkgfile
 plocate
+polkit-kde-agent
 poppler-glib
 pv
 python
@@ -106,9 +111,12 @@ python-defusedxml
 python-jinja
 python-packaging
 python-pyqt6
+qt5-wayland
+qt6-wayland
 rebuild-detector
 reflector
 reflector-simple
+rofi
 rsync
 rtkit
 s-nail
@@ -119,9 +127,11 @@ sudo
 sysfsutils
 systemd-sysvcompat
 texinfo
+thunar
 tldr
 ttf-bitstream-vera
 ttf-dejavu
+ttf-jetbrains-mono-nerd
 ttf-liberation
 ttf-opensans
 unrar
@@ -130,10 +140,12 @@ upower
 usb_modeswitch
 usbutils
 vi
+waybar
 wget
 which
 wireplumber
 wpa_supplicant
+xdg-desktop-portal-hyprland
 xdg-user-dirs
 xdg-utils
 xf86-input-libinput
