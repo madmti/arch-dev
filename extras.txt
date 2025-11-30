@@ -1,0 +1,3 @@
+zed-preview-bin			Code-editor
+zen-browser-bin			Web-browser
+

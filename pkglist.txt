@@ -44,6 +44,7 @@ gst-libav
 gst-plugin-pipewire
 gst-plugins-bad
 gst-plugins-ugly
+gum
 haveged
 hdparm
 hwdetect
@@ -54,6 +55,7 @@ intel-ucode
 inxi
 iptables-nft
 iwd
+j4-dmenu-desktop
 jfsutils
 kernel-install-for-dracut
 kitty
@@ -71,6 +73,7 @@ logrotate
 lsb-release
 lsscsi
 lvm2
+ly
 man-db
 man-pages
 mdadm
