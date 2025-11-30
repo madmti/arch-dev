@@ -2,8 +2,11 @@
 DOTFILES_DIR := $(shell pwd)
 PKG_LIST := pkglist.txt
 EXTRAS_LIST := extras.txt
+BIN_DIR := $(HOME)/.local/bin
 
-all: packages user system
+.PHONY: all packages user system git extras tools
+
+all: packages tools user system
 
 
 packages:
@@ -13,6 +16,10 @@ packages:
 user:
 	@echo "Linking User defined config (stow)"
 	stow --verbose --target=$$HOME --restow hypr
+	stow --verbose --target=$$HOME --restow wallpapers
+	
+	rm -rf $(HOME)/.bashrc $(HOME)/.bash_profile
+	stow --verbose --target=$$HOME --restow shell
 
 system:
 	@echo "Applying system config (with sudo)"
@@ -33,4 +40,10 @@ git: save
 extras:
 	@./extras.sh
 
+tools:
+	@echo "Compiling tools"
+	go build -o ./bin/app-scanner ./tools/app-scanner/main.go
+	@echo "Installing compiled tools"
+	mkdir -p $(BIN_DIR)
+	install -m 755 ./bin/* $(BIN_DIR)/
 

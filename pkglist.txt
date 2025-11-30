@@ -40,6 +40,7 @@ firewalld
 git
 github-cli
 glances
+go
 gst-libav
 gst-plugin-pipewire
 gst-plugins-bad
@@ -50,12 +51,12 @@ hdparm
 hwdetect
 hwinfo
 hyprland
+hyprpaper
 inetutils
 intel-ucode
 inxi
 iptables-nft
 iwd
-j4-dmenu-desktop
 jfsutils
 kernel-install-for-dracut
 kitty

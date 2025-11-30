@@ -1,6 +1,12 @@
 #!/usr/bin/env bash
 
-j4-dmenu-desktop --dmenu="fzf \
+SCANNER="app-scanner"
+
+if ! command -v app-scanner; then
+	echo "'$SCANNER' bin was not found.."
+fi
+
+SELECTED=$($SCANNER | fzf \
 	--reverse \
 	--border=rounded \
 	--margin=1% \
@@ -10,6 +16,13 @@ j4-dmenu-desktop --dmenu="fzf \
 	--prompt='Seach: ' \
 	--pointer='>' \
 	--header='App Launcher' \
-	" \
-	--term="kitty"
+	--delimiter="\t" \
+	--with-nth=1
+)
+
+if [[ -n "$SELECTED" ]]; then
+	CMD=$(echo "$SELECTED" | awk -F '\t' '{printf $2}')
+	hyprctl dispatch exec "$CMD"
+fi
+
 
